@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Arrays and Loops</title>
+		<style>
+			body {
+			    background-color: #365634;
+			    color: #eee;
+			}
+			h1 {
+			    margin: 50px 20px 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Arrays and Loops</h1>
+
+		<h2>Ice Creams</h2>
+		<ul>
+			<li>Vanilla</li>
+			<li>Chocolate</li>
+			<li>Raspberry</li>
+			<li>Cookies &amp; Cream</li>
+			<li>Mint Chocolate Chip</li>
+		</ul>
+
+		<script>
+			/*-------------------------------------
+			| Review
+			-------------------------------------*/
+			/* function decoration -------------------------------*/
+			function doThisAndThat(anything){
+				console.log(anything + 10);
+				console.log('I went to the part 10 times yesterday');
+			}
+			// function call
+
+			doThisAndThat('say what');
+			doThisAndThat(100);
+			doThisAndThat('say how');
+			doThisAndThat(200);
+
+			/*-------------------------------------
+
+			| Arrays FRUITY
+			-------------------------------------*/
+
+			// upon declaration/initializing
+
+			var fruity = ['apples','oranges','bananas', 12];
+
+			console.log (fruity);
+			console.log (fruity[0]);
+
+			fruity.push('grapes');
+			console.log (fruity);
+
+			fruity.splice(3,1, 'durian');
+			console.log (fruity);
+
+			delete fruity[1];
+			console.log (fruity);
+
+
+			fruity.unshift('raspberries');
+			fruity.push('kiwi');
+			console.log (fruity);
+			var howMany = fruity.length;
+			console.log(howMany);
+
+			// add after declaration/initializing
+
+			// removing array elements
+
+			// deleting array elements
+
+			// array length
+
+
+			/*-------------------------------------
+			| for Loops VEGGIES
+			-------------------------------------*/
+			// standard for loop
+			for (var i =0; i <=5; i++) {
+				   console.log(i);
+			}
+
+
+			// standard for loop against an array
+			var veggies = ['carrots', 'kale', 'spinach'];
+
+			veggies.push('green beans');
+			veggies.unshift('broccoli');
+			veggies.unshift('tomato');
+
+			for (var i =0; i <=veggies.length; i++) {
+				   console.log(veggies[i]);
+			}
+			/*-------------------------------------
+			| forEach
+			-------------------------------------*/
+			// used on arrays
+			var cars = ['honda','hyundai', 'toyota', 'ford'];
+
+			cars.push('dodge');
+			cars.unshift('tesla');
+
+			cars.forEach(function(theCar) {
+					console.log('I drove a ' + theCar + ' yesterday.');
+			});
+
+			// Used on Collections (Not really an array, rather a NodeList or group of live DOM elements)
+			var listItems = document.querySelectorAll('li');
+			console.log(listItems);
+
+			listItems.forEach(function(theItem) {
+				console.log('I am going to eat ' + theItem.innerHTML + ' ice cream tonight.');
+			});
+		</script>
+
+
+	</body>
+</html>

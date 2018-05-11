@@ -1,0 +1,47 @@
+body {
+	background-color: #333;
+	color: #eee;
+	font-family: helvetica, arial, sans-serif;
+	text-align: center;
+}
+.remote {
+	border: solid teal 10px;
+	width: 960px;
+	height: 320px;
+	margin: 25px auto;
+	background-color: white;
+	position: relative;
+}
+/*Thumbnails on the right or left*/
+.remote .thumbs {
+	position:absolute;
+	left:0px;
+	top:0px;
+
+	width:320px;
+	height:320px;
+
+	font-size: 0px;
+}
+
+.remote .thumbs img {
+   width:80px;
+	 height:80px;
+}
+
+.thumbs {
+	position: absolute;
+	right:0px;
+	top:0px;
+}
+
+/*Large opposite of the thumbnails (e.g. right or left)*/
+.remote .large {
+	position: absolute;
+	right:0px;
+}
+
+.remote .large img {
+   width: 640px;
+	 height: 320px;
+}

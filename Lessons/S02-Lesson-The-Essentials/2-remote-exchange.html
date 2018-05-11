@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Remote Exchange</title>
+		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			body { background-color: #a13636; }
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Remote Exchange</h1>
+
+			<div class="swap">
+				<img src="./img/large/1_600x250.jpg" class="large">
+
+				<div class="gallery">
+					<img src="./img/small/1_200x83.jpg">
+					<img src="./img/small/2_200x83.jpg">
+					<img src="./img/small/3_200x83.jpg">
+					<img src="./img/small/4_200x83.jpg">
+					<img src="./img/small/5_200x83.jpg">
+					<img src="./img/small/6_200x83.jpg">
+
+
+			</div>
+		</div>
+
+
+		<script>
+			var large = document.querySelectorAll('img.large');
+			var thumbs = document.querySelectorAll('.gallery img');
+
+			function thumb_over(){
+				console.log(this.dataset.large);
+
+				var newSrc = this.dataset.large;
+
+				large[0].src = "./img/large/1_600x250.jpg"
+			}
+
+			large[0].addEventListener('mouseover', thumb-over);
+			thumbs[0].addEventListener('mouseover', thumb-over);
+			thumbs[1].addEventListener('mouseover', thumb-over);
+			thumbs[2].addEventListener('mouseover', thumb-over);
+			thumbs[3].addEventListener('mouseover', thumb-over);
+
+
+		</script>
+	</body>
+</html>

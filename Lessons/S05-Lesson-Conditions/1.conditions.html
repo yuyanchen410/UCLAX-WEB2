@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Conditions</title>
+		<style>
+			body {
+			    background-color: #365634;
+			}
+			h1 {
+			    margin: 50px 20px 100px;
+			}
+			.container {
+				background-color: white;
+				padding: 20px;
+				width: 300px;
+				margin: auto;
+			}
+			header {
+				background-color: #eee;
+				padding: 20px;
+			}
+			.departure-details {
+				background-color: goldenrod;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Conditions</h1>
+
+		<div class="container">
+			<header>
+				<h2>Your Flight Is Booked</h2>
+				<button class="product">
+					<span>Show</span> Departure Details
+				</button>
+			</header>
+			<div class="departure-details">
+				<p>
+					<span>Departure Airport: </span>
+					<span>LAX</span>
+				</p>
+				<p>
+					<span>Departure Time: </span>
+					<span>08:00</span>
+				</p>
+			</div>
+		</div>
+
+
+		<script>
+			/*-------------------------------------
+			| Review
+			-------------------------------------*/
+
+
+
+			/*-------------------------------------
+			| Conditions
+			-------------------------------------*/
+			if (true)
+			{
+				console.log('must be true');
+			}
+
+			if (1 == 2)
+			{
+				console.log('must be true');
+			}
+
+			var weather = 'blue'
+			if(weather == 'rainy')
+			{
+				console.log('bring your umbrella');
+			}
+			else {
+				console.log('bring your sunscreen')
+			}
+
+			/*-------------------------------------
+			| Toggle Element Examples
+			-------------------------------------*/
+			//0.grab elements
+
+			var button = document.querySelector('button.product');
+			var departureDetails = document.querySelector('div.departure-details');
+			var showHideText = document.querySelector('button.product span');
+
+			console.log('Button', button);
+			console.log('Show Hide Text', showHideText);
+			console.log('Depart Details', departureDetails);
+			//1. hide departure Details
+
+
+			//2. clicks on buttons, show or hide departure details,
+			//change naming on the button
+			departureDetails.style.display = 'block';
+			departureDetails.style.display = 'none';
+
+			showHideText.innerHTML = 'Hide';
+			showHideText.innerHTML = 'Show';
+
+			button.addEventListener('click', function(){
+
+
+					if (departureDetails.style.display == "none")
+					{
+					console.log('Do A');
+							departureDetails.style.display = 'block';
+							showHideText.innerHTML = 'Hide';
+					}
+					else
+					{
+   				console.log('Do B!');
+							departureDetails.style.display = 'none';
+							showHideText.innerHTML = 'Show';
+					}
+
+			});
+
+		</script>
+
+
+	</body>
+</html>
